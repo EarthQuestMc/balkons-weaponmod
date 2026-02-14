@@ -3,6 +3,8 @@ package ckathode.weaponmod.item;
 import java.util.Random;
 import java.util.UUID;
 
+import ckathode.weaponmod.WMCommonProxy;
+import cpw.mods.fml.common.registry.GameData;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -28,7 +30,8 @@ public class ItemMelee extends ItemSword implements IItemWeapon
 	public ItemMelee(String id, MeleeComponent meleecomponent)
 	{
 		super((meleecomponent.weaponMaterial == null ? ToolMaterial.WOOD : meleecomponent.weaponMaterial));
-		GameRegistry.registerItem(this, id, BalkonsWeaponMod.MOD_ID);
+		//GameRegistry.registerItem(this, id, BalkonsWeaponMod.MOD_ID);
+		GameData.getItemRegistry().addObject(WMCommonProxy.itemList.get(id), id, this);
 		setUnlocalizedName(id);
 		setTextureName("weaponmod:" + id);
 		

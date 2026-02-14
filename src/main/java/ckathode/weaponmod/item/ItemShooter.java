@@ -3,6 +3,8 @@ package ckathode.weaponmod.item;
 import java.util.Random;
 import java.util.UUID;
 
+import ckathode.weaponmod.WMCommonProxy;
+import cpw.mods.fml.common.registry.GameData;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
@@ -32,7 +34,8 @@ public class ItemShooter extends ItemBow implements IItemWeapon
 	public ItemShooter(String id, RangedComponent rangedcomponent, MeleeComponent meleecomponent)
 	{
 		super();
-		GameRegistry.registerItem(this, id, BalkonsWeaponMod.MOD_ID);
+		//GameRegistry.registerItem(this, id, BalkonsWeaponMod.MOD_ID);
+		GameData.getItemRegistry().addObject(WMCommonProxy.itemList.get(id), id, this);
 		setUnlocalizedName(id);
 		setTextureName("weaponmod:" + id);
 		

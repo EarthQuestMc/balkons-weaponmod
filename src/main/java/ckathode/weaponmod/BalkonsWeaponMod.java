@@ -155,8 +155,10 @@ public class BalkonsWeaponMod
 	}
 	
 	@EventHandler
-	public void preInitMod(FMLPreInitializationEvent event)
-	{
+	public void preInitMod(FMLPreInitializationEvent event) {
+		WMCommonProxy.config = new Configuration(event.getSuggestedConfigurationFile());
+		proxy.initConfig();
+
 		modLog = event.getModLog();
 		
 		modConfig = new WeaponModConfig(new Configuration(event.getSuggestedConfigurationFile()));
