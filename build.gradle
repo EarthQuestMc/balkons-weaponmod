@@ -29,7 +29,7 @@ apply plugin: 'forge'
 
 version = "1.0.2"
 group= "ckathode.weaponmod"
-archivesBaseName = "BalkonsWeaponMod"
+archivesBaseName = "EQBalkonsWeaponMod"
 targetCompatibility = sourceCompatibility = JavaVersion.VERSION_1_8
 
 
