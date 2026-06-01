@@ -206,7 +206,7 @@ public class MeleeComponent extends AbstractWeaponComponent
 		BATTLEAXE(0, 1F, 3, 1F, 1.5F, 0.5F, 1, 2, 1, 5),
 		WARHAMMER(0, 1F, 4, 1F, 1F, 0.7F, 1, 2, 1, 5),
 		KNIFE(0, 0.5F, 3, 1F, 1.5F, 0.2F, 1, 2, 1, 0),
-		KATANA(0, 1F, 1, 1F, 1F, 0F, 1, 2, 1, -6),
+		KATANA(0, 1F, 0, 1F, 1F, 0.4F, 1, 2, 1, -2),
 		FIREROD(1, 0F, 1, 0F, 1F, 0.4F, 2, 0, 1, 0),
 		BOOMERANG(0, 0.5F, 2, 1F, 1F, 0.4F, 1, 1, 1, 0),
 		NONE(0, 0F, 1, 0F, 1F, 0.4F, 0, 0, 1, 0);

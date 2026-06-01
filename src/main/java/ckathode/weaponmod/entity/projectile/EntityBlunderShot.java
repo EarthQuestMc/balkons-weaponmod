@@ -52,8 +52,8 @@ public class EntityBlunderShot extends EntityProjectile
 	@Override
 	public void onEntityHit(Entity entity)
 	{
-		float damage = 4F + extraDamage;
-		
+		float damage = 8F + extraDamage;
+
 		DamageSource damagesource;
 		if (shootingEntity == null)
 		{
@@ -62,11 +62,9 @@ public class EntityBlunderShot extends EntityProjectile
 		{
 			damagesource = WeaponDamageSource.causeProjectileWeaponDamage(this, shootingEntity);
 		}
-		
-		int prevhurtrestime = entity.hurtResistantTime;
+
 		if (entity.attackEntityFrom(damagesource, damage))
 		{
-			entity.hurtResistantTime = prevhurtrestime;
 			applyEntityHitEffects(entity);
 			playHitSound();
 			setDead();

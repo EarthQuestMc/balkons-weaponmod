@@ -189,7 +189,7 @@ public abstract class RangedComponent extends AbstractWeaponComponent
 		if (!isReloaded(itemstack)) return;
 		if (isReadyToFire(itemstack))
 		{
-			if (hasAmmoAndConsume(itemstack, world, entityplayer))
+			if (!world.isRemote && hasAmmoAndConsume(itemstack, world, entityplayer))
 			{
 				fire(itemstack, world, entityplayer, i);
 			}
